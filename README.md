@@ -1,2 +1,2 @@
-# gameplan-docs
+# Gameplan REST API
 Gameplan Docs
