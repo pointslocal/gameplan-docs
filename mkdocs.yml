@@ -6,8 +6,8 @@ site_author: Nathan Kozyra
 pages:
 - Home: index.md
 - Games: api_games.md
-- Players: API_Players.md
-- Schools: API_Schools.md
-- Teams: API_Teams.md
-- Sports: API_Sports.md
-- Standings: API_Standings.md
+- Players: api_players.md
+- Schools: api_schools.md
+- Teams: api_teams.md
+- Sports: api_sports.md
+- Standings: api_standings.md
