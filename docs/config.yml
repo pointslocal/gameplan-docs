@@ -7,11 +7,11 @@ repo_url: https://github.com/pointslocal/gameplan-docs
 
 pages:
 - Home: index.md
-- Games (GET): API_Games.md
-- Players (GET): API_Players.md
-- Schools (GET): API_Schools.md
-- Teams (GET): API_Teams.md
-- Sports (GET): API_Sports.md
-- Standings (GET): API_Standings.md
+- Games: API_Games.md
+- Players: API_Players.md
+- Schools: API_Schools.md
+- Teams: API_Teams.md
+- Sports: API_Sports.md
+- Standings: API_Standings.md
 
 copyright: Copyright &copy; 2015 Pointslocal.
