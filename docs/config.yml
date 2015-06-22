@@ -1,0 +1,17 @@
+site_name: Pointslocal GamePlan API
+site_url: http://corporate.pointslocal.com
+site_description: API Documentation for Pointslocal's GamePlan
+site_author: Nathan Kozyra
+
+repo_url: https://github.com/pointslocal/gameplan-docs
+
+pages:
+- Home: index.md
+- Games (GET): API_Games.md
+- Players (GET): API_Players.md
+- Schools (GET): API_Schools.md
+- Teams (GET): API_Teams.md
+- Sports (GET): API_Sports.md
+- Standings (GET): API_Standings.md
+
+copyright: Copyright &copy; 2015 Pointslocal.
