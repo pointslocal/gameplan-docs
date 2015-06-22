@@ -5,7 +5,7 @@ site_author: Nathan Kozyra
 
 pages:
 - Home: index.md
-- Games: API_Games.md
+- Games: api_games.md
 - Players: API_Players.md
 - Schools: API_Schools.md
 - Teams: API_Teams.md
