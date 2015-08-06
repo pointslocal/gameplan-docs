@@ -11,3 +11,5 @@ pages:
 - Teams: api_teams.md
 - Sports: api_sports.md
 - Standings: api_standings.md
+- Widgets
+  - Schedules: widgets_schedule.md
