@@ -68,9 +68,11 @@ Example:
 
 ## Scoreboard
 The scoreboard shows a full page of a day's games in a grid format. 
+![scoreboard]({{ site.url }}/assets/scoreboard.png)
 
 ## Ticker
 The ticker widget shows up to 5 games at a time (on tablet/desktop views) with the ability to scroll through all of the day's available games.
+![scoreboard]({{ site.url }}/assets/ticker.png)
 
 ## Daily Leaders
 Shows the top performers in each category with an optional threshold.
