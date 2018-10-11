@@ -1,7 +1,7 @@
 # Gameplan Widgets
 {{ site.url }}
 
-The Gameplan widget library allows you to create seamless widgets for scoreboards, score tickers, leaders and 
+The Gameplan widget library allows you to create seamless widgets for scoreboards, score tickers and daily leaderboards
 
 > Note: as of the Fall 2018 widgets release, browser compatibility requirements have changed for Gameplan. jQuery is no longer a requirement, Supported modern browsers include: 
 * Microsoft Edge
@@ -46,12 +46,15 @@ Finally on page loaded, initialize the widget:
 * ```sid``` - a sport's internal ID from Pointslocal. 
 * ```disableNavigation``` - will hide the day and sports navigation from above the widget.
 * ```leaders``` - an object of stats to highlight.  See Leaders.
+* ```style``` - modifies the presentation of the widget per the widget type's specification.
+* ```bracket_id``` - can show games by numeric bracket id. Also used by the bracket widget to specify the bracket to show.
 
 ### Widget Types
 Available ```widget``` types are:
 * Scoreboard - a full page grid of scores.
 * Ticker - a smaller widget that enables scrolling through scores automatically or manually.
 * Leaders - can show daily stat leaders 
+* Brackets - shows full bracket with games, available as ```stacked``` in order to place both sides of the bracket on top of each other
 
 ### Leaders 
 Will show the top-performing players of the day based on specified stat types. This takes an object of stats and optional minimums and counts. Without a count, it will show 2 maximum players.
@@ -73,6 +76,9 @@ The scoreboard shows a full page of a day's games in a grid format.
 ## Ticker
 The ticker widget shows up to 5 games at a time (on tablet/desktop views) with the ability to scroll through all of the day's available games.
 ![scoreboard]({{ site.url }}/gameplan-docs/assets/ticker.png)
+
+## Bracket
+Brackets have two primary options: the id, specified by ```bracket_id``` and the display style, which can accept ```full``` (default) or ```stacked``` to show the sides of the bracket vertically.
 
 ## Daily Leaders
 Shows the top performers in each category with an optional threshold.
