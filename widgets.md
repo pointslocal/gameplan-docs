@@ -34,6 +34,7 @@ Finally on page loaded, initialize the widget:
         date: '[date]',
         sid: [sport_id],
         disableNavigation: false,
+        teamDisplay: 'name',
     });
 </script>
 ```
@@ -48,6 +49,7 @@ Finally on page loaded, initialize the widget:
 * ```leaders``` - an object of stats to highlight.  See Leaders.
 * ```style``` - modifies the presentation of the widget per the widget type's specification.
 * ```bracket_id``` - can show games by numeric bracket id. Also used by the bracket widget to specify the bracket to show.
+* ```teamDisplay``` - by default, the widgets will show a team abbreviation. By setting this option to ```name```, it will bypass and show the full school/team name.
 
 ### Widget Types
 Available ```widget``` types are:
