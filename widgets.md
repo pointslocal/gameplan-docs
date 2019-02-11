@@ -50,13 +50,15 @@ Finally on page loaded, initialize the widget:
 * ```style``` - modifies the presentation of the widget per the widget type's specification.
 * ```bracket_id``` - can show games by numeric bracket id. Also used by the bracket widget to specify the bracket to show.
 * ```teamDisplay``` - by default, the widgets will show a team abbreviation. By setting this option to ```name```, it will bypass and show the full school/team name.
+* ```api``` - accepts an object that will pass-through any API options to the ```/games```, ```/leaders```, ```/brackets``` or ```/bracketology``` endpoints as documented here: https://pointslocal.readthedocs.io/en/latest/api/
 
 ### Widget Types
 Available ```widget``` types are:
-* Scoreboard - a full page grid of scores.
-* Ticker - a smaller widget that enables scrolling through scores automatically or manually.
-* Leaders - can show daily stat leaders 
-* Brackets - shows full bracket with games, available as ```stacked``` in order to place both sides of the bracket on top of each other
+* Scoreboard - ```scoreboard``` - a full page grid of scores.
+* Ticker - ```ticker``` - a smaller widget that enables scrolling through scores automatically or manually.
+* Leaders - ```leaders``` - can show daily stat leaders 
+* Brackets - ```brackets``` - shows full bracket with games, available as ```stacked``` in order to place both sides of the bracket on top of each other. Typically handles single-elimination, balanced brackets culminating in a sole final game.
+* Bracketology - ```bracketology``` - a more expressive bracket format that allows arbitrary number of teams, consolation brackets and unbalanced rounds.
 
 ### Leaders 
 Will show the top-performing players of the day based on specified stat types. This takes an object of stats and optional minimums and counts. Without a count, it will show 2 maximum players.
@@ -81,6 +83,36 @@ The ticker widget shows up to 5 games at a time (on tablet/desktop views) with t
 
 ## Bracket
 Brackets have two primary options: the id, specified by ```bracket_id``` and the display style, which can accept ```full``` (default) or ```stacked``` to show the sides of the bracket vertically.
+
+If called via the ```bracketology``` endpoint, the only view is stacked. This view supports consolation rounds, playins and other abnormal tournament designs.
+
+To use any bracket endpoint, the bracket's ID must be specified via the aforementioned ```bracket_id``` parameter or directly, in the API options . An example:
+
+```
+    Gameplan.init({
+        selector: '#gameplan-bracket',
+        widget: 'bracketology',
+        api: {
+            id: 29
+        },
+        endpoint: 'bracketology',
+        site: '[your site]',
+        disableNavigation: false
+    });
+```
+
+or
+
+```
+    Gameplan.init({
+        selector: '#gameplan-bracket',
+        widget: 'bracket',
+        bracket_id: 29,
+        endpoint: 'bracketology',
+        site: '[your site]',
+        disableNavigation: false
+    });
+```
 
 ## Daily Leaders
 Shows the top performers in each category with an optional threshold.
